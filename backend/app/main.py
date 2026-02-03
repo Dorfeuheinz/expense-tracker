@@ -64,4 +64,5 @@ async def root():
 
 @app.get("/health")
 async def health():
-    return {"status": "healthy"}
+    """Health check endpoint for uptime monitoring."""
+    return {"status": "healthy", "service": "expense-tracker-api"}

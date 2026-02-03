@@ -1,0 +1,12 @@
+name = "expense-tracker-api"
+main = "worker.py"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["python_workers"]
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+# Secrets are set via: wrangler secret put <KEY>
+# Required secrets:
+# - DATABASE_URL
+# - CORS_ORIGINS

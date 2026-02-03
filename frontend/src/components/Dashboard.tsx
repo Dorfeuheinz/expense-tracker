@@ -146,10 +146,11 @@ const Dashboard = () => {
                       verticalAlign="bottom"
                       height={60}
                       iconType="circle"
-                      formatter={(value, entry: { payload?: { value: number } }) => {
-                        if (entry?.payload?.value) {
+                      formatter={(value, entry) => {
+                        const payloadValue = entry?.payload?.value;
+                        if (typeof payloadValue === 'number') {
                           const percent = (
-                            (entry.payload.value / stats.total_expenses) *
+                            (payloadValue / stats.total_expenses) *
                             100
                           ).toFixed(1);
                           return `${value} (${percent}%)`;

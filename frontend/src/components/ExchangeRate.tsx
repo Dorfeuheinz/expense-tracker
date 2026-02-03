@@ -1,6 +1,6 @@
 import { SwapOutlined } from '@ant-design/icons';
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { Button, Card, Col, InputNumber, Row, Select, Space, Statistic, message } from 'antd';
+import { Button, Card, Col, InputNumber, Row, Select, Space, message } from 'antd';
 import { useState } from 'react';
 import { convertCurrency, getExchangeRates } from '../api/exchange';
 

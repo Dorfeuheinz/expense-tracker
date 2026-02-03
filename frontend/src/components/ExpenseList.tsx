@@ -2,7 +2,7 @@ import { DeleteOutlined, EditOutlined, PlusOutlined } from '@ant-design/icons';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { Button, Card, Empty, Popconfirm, Space, Spin, Table, Tag, message } from 'antd';
 import { format } from 'date-fns';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { deleteExpense, getExpenses } from '../api/expenses';
 import { ExpenseCategory } from '../types';
 

@@ -308,35 +308,21 @@ VITE_API_URL=http://localhost:8000
 
 ## 🚀 Deployment
 
-### Backend Deployment
+This application is configured for deployment on **Cloudflare** for cost-effective hosting.
 
-The backend can be deployed to:
-- **AWS**: Elastic Beanstalk, ECS, or EC2
-- **Azure**: App Service or Container Instances
-- **GCP**: Cloud Run or App Engine
-- **Heroku**: Heroku Postgres + FastAPI app
-- **Railway**: Railway PostgreSQL + FastAPI
-- **Render**: Render PostgreSQL + Web Service
+### Cloudflare Deployment
 
-**Production considerations:**
-- Use environment variables for all configuration
-- Set up a managed PostgreSQL database
-- Configure CORS to allow your frontend domain
-- Use a production ASGI server (Gunicorn with Uvicorn workers)
+- **Frontend**: Cloudflare Pages (static site hosting)
+- **Backend**: Cloudflare Workers for Python (serverless functions)
+- **Database**: External PostgreSQL (Supabase free tier recommended)
 
-### Frontend Deployment
+**Quick Start:**
+1. Deploy frontend to Cloudflare Pages
+2. Deploy backend to Cloudflare Workers
+3. Set up PostgreSQL database (Supabase)
+4. Configure environment variables and CORS
 
-The frontend can be deployed to:
-- **Vercel**: Connect GitHub repo for automatic deployment
-- **Netlify**: Drag & drop `dist` folder or connect GitHub
-- **AWS S3 + CloudFront**: Upload build and serve via CDN
-- **Azure Static Web Apps**: Deploy via GitHub Actions
-- **GitHub Pages**: Deploy `dist` folder
-
-**Production considerations:**
-- Build the project: `npm run build`
-- Set `VITE_API_URL` to your production backend URL
-- Ensure backend CORS allows your frontend domain
+**Cost**: Free tier includes 100,000 requests/day for Workers and unlimited Pages requests.
 
 ## 📝 Database Migrations
 
